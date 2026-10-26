@@ -7,7 +7,7 @@ Use this to interact with jobs, player data, leaderboards, and GUIs from your ow
 
 ## Adding the dependency
 
-The API is published to the [Oreo Studios Maven repository](https://maven.oreostudios.fr/releases) and JitPack. Oreo Studios Maven is recommended; the dependency coordinates are `com.github.el211:ModerJobs-API:1.1.0`. Repository credentials are not needed to download the published API.
+The API is published to the [Oreo Studios Maven repository](https://maven.oreostudios.fr/#/releases) and JitPack. Oreo Studios Maven is recommended; the dependency coordinates are `com.github.el211:ModerJobs-API:1.1.0`. Repository credentials are not needed to download the published API.
 
 The API is hosted via [JitPack](https://jitpack.io). You do **not** need the plugin JAR on your classpath — just add the JitPack repository and the dependency below.
 
