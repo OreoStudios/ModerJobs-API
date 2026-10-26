@@ -1,6 +1,6 @@
 package fr.oreo.modernjobs.api;
 
-import fr.oreo.modernjobs.ModernJobs;
+import org.bukkit.Bukkit;
 
 import java.util.Optional;
 
@@ -10,8 +10,10 @@ public final class OJobsProvider {
     private OJobsProvider() {}
 
     public static Optional<OJobsApi> get() {
-        ModernJobs plugin = ModernJobs.getInstance();
-        return plugin == null ? Optional.empty() : Optional.of(plugin.getApi());
+        org.bukkit.plugin.Plugin plugin = Bukkit.getPluginManager().getPlugin("ModernJobs");
+        if (plugin == null || !plugin.isEnabled()) return Optional.empty();
+        try { return Optional.ofNullable((OJobsApi) plugin.getClass().getMethod("getApi").invoke(plugin)); }
+        catch (ReflectiveOperationException | ClassCastException exception) { return Optional.empty(); }
     }
 
     public static OJobsApi getOrThrow() {

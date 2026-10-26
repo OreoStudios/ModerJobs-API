@@ -6,12 +6,20 @@
 
     <groupId>com.github.el211</groupId>
     <artifactId>ModerJobs-API</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
     <name>ModernJobs API</name>
     <description>Public API for the ModernJobs plugin — jobs, player data, leaderboards, and GUI integration.</description>
     <url>https://github.com/el211/ModerJobs-API</url>
+
+    <distributionManagement>
+        <repository>
+            <id>oreostudios-releases</id>
+            <name>Oreo Studios Maven Releases</name>
+            <url>https://maven.oreostudios.fr/releases</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <java.version>17</java.version>

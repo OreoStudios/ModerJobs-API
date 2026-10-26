@@ -14,6 +14,12 @@ import java.util.UUID;
 
 public interface OJobsApi {
 
+    boolean registerPerkHandler(CustomPerkHandler handler);
+
+    boolean unregisterPerkHandler(String key);
+
+    Collection<CustomPerkHandler> getRegisteredPerkHandlers();
+
     Collection<Job> getJobs();
 
     Optional<Job> getJob(String jobId);
